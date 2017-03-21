@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shadow</title>
+    <style type="text/css">
+        .one {
+            width: 400px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 100px auto;
+            box-shadow: inset -6px -5px 16px #ccc, 7px 5px 11px #ccc inset;
+            position: relative;
+            text-align: center;
+            line-height: 100px;
+            font-size: 20px;
+            font-family: 宋体;
+        }
+        .one::after,.one::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            bottom: 0px;
+            right: 5px;
+    /*        background-color: aquamarine;*/
+            box-shadow: 0px 5px 4px #ccc;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            z-index: -1;
+        }
+
+        .two {
+            width: 1200px;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid palegreen;
+        }
+        .two ul {
+            list-style: none;
+        }
+
+        .two li{
+            float: left;
+            width:300px;
+            height: 250px;
+            margin: 20px;
+            padding: 10px;
+            background-color: white;
+            position: relative;
+        }
+
+        .two li img {
+            width:100%;
+            height:100%;
+        }
+
+        .two li::before {
+                              content: "";
+                              position: absolute;
+                              width: 83%;
+                              height: 80%;
+                              left: 35px;
+                              bottom: 10px;
+                              z-index: -2;
+                              background: transparent;
+                              box-shadow: 6px 8px 20px rgba(0,0,0,0.6);
+                              transform: skew(-14deg) rotate(-4deg);
+                          }
+        .two li::after {
+            content: "";
+            position: absolute;
+            width: 83%;
+            height: 80%;
+            right: 34px;
+            bottom: 10px;
+            z-index: -2;
+            background: transparent;
+            box-shadow: -6px 11px 13px rgba(0,0,0,0.6);
+            transform: skew(14deg) rotate(4deg);
+        }
+    </style>
+</head>
+<body>
+    <!--曲线阴影，利用阴影叠加 -->
+    <div class="one">
+        曲线阴影，下面的是翘边阴影哦！
+    </div>
+    <!--翘边阴影-->
+    <div class="two">
+        <ul>
+        <li><img src="1.jpg" alt=""></li>
+        <li><img src="3.jpg" alt=""></li>
+        <li><img src="4.jpg" alt=""></li>
+        </ul>
+    </div>
+
+</body>
+</html>
