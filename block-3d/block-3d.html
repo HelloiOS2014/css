@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>酷炫的3d盒子</title>
+    <style>
+        .stage {
+            width: 400px;
+            height: 300px;
+            border: 1px solid red;
+            margin: 100px auto;
+            perspective: 2000px;
+            transform-style: preserve-3d;
+            perspective-origin: 50% 50%;
+        }
+
+        .container {
+            width: 400px;
+            height: 300px;
+            transform-style: preserve-3d;
+            position: relative;
+            animation: move 4s ease-in-out infinite;
+        }
+        .container .block {
+            width: 160px;
+            height: 160px;
+            border: 1px solid grey;
+            position: absolute;
+            text-align: center;
+            line-height: 160px;
+            top: 80px;
+            left: 120px;
+
+        }
+        .container .one {
+            transform: translateZ(80px);
+            background-color: #07beea;
+        }
+        .container .two {
+            transform: rotateY(90deg) translateZ(80px);
+            background-color: deepskyblue;
+        }
+
+        .container .three {
+            background-color: greenyellow;
+            transform: rotateY(180deg) translateZ(80px);
+        }
+        .container .four {
+            transform: rotateY(270deg) translateZ(80px);
+            background: lightgreen;
+        }
+        .container .five {
+            transform: rotateX(90deg) translateZ(80px);
+            background-color: paleturquoise;
+
+        }
+        .container .six {
+            transform: rotateX(-90deg) translateZ(80px);
+            background-color: orangered;
+        }
+    @-webkit-keyframes move {
+        0%{
+            transform: rotateY(0deg) rotate(-30deg);
+        }
+        100%{
+            transform: rotateY(360deg) rotate(-30deg);
+        }
+    }
+    </style>
+
+
+</head>
+<body>
+    <div class="stage">
+        <div class="container">
+            <div class="block one">一</div>
+            <div class="block two">二</div>
+            <div class="block three">三</div>
+            <div class="block four">四</div>
+            <div class="block five">五</div>
+            <div class="block six">六</div>
+        </div>
+    </div>
+</body>
+</html>

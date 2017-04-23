@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渐变文字与镂空文字</title>
+    <style>
+
+        .text-stroke {
+            font-family: 宋体;
+            font-weight: bold;
+            -webkit-text-stroke: 1px deepskyblue;
+        }
+        .text-fill{
+            width: 500px;
+            height: 300px;
+            -webkit-text-stroke: 1px deepskyblue;
+            -webkit-text-fill-color: transparent;
+           -webkit-background-clip: text;
+            font-size: 50px;
+            background-size: 200% 200%;
+            -webkit-animation: movetext 3s ease-in-out infinite;
+          background-image: -webkit-gradient(linear,left top,right bottom,from(lightblue),color-stop(7.5,deepskyblue),to(greenyellow));
+        }
+        .text-fill:hover {
+            font-size: 50px;
+            transition: all 2s ease-in-out;
+        }
+@-webkit-keyframes movetext {
+    0%{
+        background-size: 0 0;
+    }
+    100%{
+        background-size: 200% 200%;
+    }
+}
+        
+    </style>
+</head>
+<body>
+    <div class="text-stroke">
+       <h2> 梦想并非遥不可及！</h2>
+    </div>
+    <div class="text-fill">
+        <h2> 梦想并非遥不可及！</h2>
+    </div>
+</body>
+</html>
