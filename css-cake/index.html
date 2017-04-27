@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>loading圆饼制作</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    .wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -150px;
+        margin-top: -150px;
+        width:300px;
+        height: 300px;
+        border: 1px solid red;
+    }
+        .content {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 200px;
+            height: 200px;
+            border: 10px solid lightgreen;
+            border-radius: 200px;
+            border-top-color: white;
+            animation: ring 1s infinite linear;
+        }
+
+        @-webkit-keyframes ring {
+            0%{
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .one {
+            position: absolute;
+            top: 90px;
+            left: 90px;
+            width: 0;
+            height: 0;
+            border: 70px solid;
+            border-radius: 70px;
+
+            border-top-color: lightgreen;
+            border-right-color: lightgreen;
+            border-bottom-color: dodgerblue;
+            border-left-color: dodgerblue;
+            box-sizing: border-box;
+
+        }
+        .two {
+            width: 0;
+            height: 0;
+            position: absolute;
+            left: 90px;
+            top: 90px;
+            border: 70px solid dodgerblue;
+            border-radius: 70px;
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+            z-index: 3;
+          animation: two linear 4s infinite ;
+            border-image-width:0 ;
+        }
+        .three {
+            width: 0;
+            height: 0;
+            position: absolute;
+            left: 90px;
+            top: 90px;
+            border: 70px solid lightgreen;
+            border-radius: 70px;
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+            z-index: 2;
+            animation: three linear 4s infinite ;
+            border-image-width:0 ;
+        }
+        @keyframes three{
+            0% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(180deg);
+            }
+            50% {
+                transform: rotate(180deg);
+                z-index: 3;
+            }
+            75% {
+                transform: rotate(360deg);
+                z-index: 3;
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes two {
+            0% {
+                transform: rotate(0deg);
+                z-index: 3;
+            }
+            25% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+                z-index: 2;
+            }
+            75% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(360deg);
+                z-index: 3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+    <div class="content"></div>
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+
+    </div>
+</body>
+</html>
