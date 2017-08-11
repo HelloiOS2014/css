@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三栏式布局</title>
+    <style>
+        *{
+            margin:0;
+        }
+    .right ,.center, .left {
+        height: 200px;
+        background-color: #07beea;
+    }
+
+    .m-box {
+        width: 100%;
+        float: left;
+    }
+     .right {
+         width:200px;
+        float: left;
+         margin-left: -200px;
+         background-color: deepskyblue;
+     }
+        .left {
+            width: 200px;
+            float: left;
+            background-color: greenyellow;
+            margin-left: -100%;
+        }
+        .center {
+            margin: 0 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="m-box">
+    <div class="center">222</div>
+</div>
+        <div class="left">111</div>
+        <div class="right">333</div>
+
+
+
+</body>
+</html>
