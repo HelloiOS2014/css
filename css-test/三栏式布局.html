@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>三栏式布局</title>
+	<style>
+
+		*{
+			margin:0;
+			padding: 0;
+		}
+		.left {
+			background-color: skyblue;
+			width: 200px;
+			height: 100px;
+			float: left;
+			margin-left: -100%;
+		}
+
+		.center {
+			background-color: orange;
+			height: 100px;
+			margin:0 200px;
+		}
+
+		.right {
+			background-color: lightgreen;
+			width: 200px;
+			height: 100px;
+			float: left;
+			margin-left: -200px;
+		}
+
+
+		.main {
+			width: 100%;
+			float: left;
+		
+		}
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="center"></div>
+	</div>
+	<div class="left"></div>
+	<div class="right"></div>
+
+
+	<div class="footer">
+		adada
+	</div>
+</body>
+</html>
