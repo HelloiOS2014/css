@@ -28,6 +28,10 @@
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
             z-index: -1;
+            -webkit-animation-direction: alternate;
+            -moz-animation-direction: alternate;
+            -o-animation-direction: alternate;
+            animation-direction: alternate;
         }
 
         .two {
@@ -94,6 +98,9 @@
         <li><img src="4.jpg" alt=""></li>
         </ul>
     </div>
-
+<script>
+    var parent=document.getElementsByClassName("two");
+    console.log(parent);
+</script>
 </body>
 </html>

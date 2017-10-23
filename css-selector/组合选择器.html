@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		/* 后代选择器 */
+		ul li {
+			color: red;
+		}
+		/* 直接相邻兄弟选择器 */
+		ul+ol {
+			color: green;
+		}
+		/* 子代选择器 */
+		li>p {
+			color: skyblue;
+		}
+		/* 通用相邻兄弟选择器 */
+		ul~ol {
+			color: black;
+		}
+		/* 多类选择器 */
+		.a.b {
+			color: orange;
+		}
+
+	</style>
+</head>
+<body>
+<ul>
+	<li class="a b">u1-1
+		<p>我是第三层</p>
+	</li>
+	<li>u1-2</li>
+	<li>u1-3</li>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+
+</ul>
+<ol>
+	<li>u2-1</li>
+	<li>u2-2</li>
+	<li>u2-3</li>
+	<ol>
+		<li>12</li>
+		<li>21</li>
+		<li>12</li>
+	</ol>
+</ol>
+
+</body>
+</html>
